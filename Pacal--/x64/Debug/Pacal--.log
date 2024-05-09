@@ -1,0 +1,9 @@
+﻿  ArrayTable.cpp
+  Main.cpp
+  Создание кода...
+C:\Users\Tytyf\source\repos\Lab2_Pascal--\main\Main.cpp(11,8): error C2672: "ArrayTable::find": не найдена соответствующая перегруженная функция
+  C:\Users\Tytyf\source\repos\Lab2_Pascal--\Include\ArrayTable.h(26,27):
+  может быть "T ArrayTable::find(void)"
+  	C:\Users\Tytyf\source\repos\Lab2_Pascal--\main\Main.cpp(11,8):
+  	"T ArrayTable::find(void)": не удается вывести аргумент шаблон для "T"
+  
