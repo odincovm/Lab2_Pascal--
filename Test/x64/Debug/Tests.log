@@ -1,0 +1,3 @@
+﻿  Tests_table.cpp
+C:\Users\Tytyf\source\repos\Lab2_Pascal--\Test\Tests_table.cpp(34,6): warning C4101: ans: неиспользованная локальная переменная
+  Tests.vcxproj -> C:\Users\Tytyf\source\repos\Lab2_Pascal--\x64\Debug\Tests.exe

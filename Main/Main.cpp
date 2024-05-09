@@ -5,6 +5,7 @@
 using namespace std;
 int main()
 {
-    
+	ArrayTable<int> tmp;
+	tmp.insert("test", true, 12);
 }
 
