@@ -121,6 +121,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ArratTable.cpp" />
+    <ClCompile Include="Include\HierarchicalList.cpp" />
     <ClCompile Include="main\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
