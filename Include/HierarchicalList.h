@@ -3,10 +3,10 @@
 using namespace std;
 class HierarchicalList {
 	struct Node {
-		Node* parent = nullptr;
-		Node* child = nullptr;
-		Node* Next = nullptr;
-		Node* Last = nullptr;
+		Node* parent;
+		Node* child;
+		Node* Next;
+		Node* Last;
 		string value;
 		Node(string val) { value = val; parent = nullptr, child = nullptr, Next = nullptr, Last = nullptr;}
 		Node() { parent = nullptr; child = nullptr; Next = nullptr; Last = nullptr; }
@@ -30,22 +30,20 @@ class HierarchicalList {
 	
 public:
 	HierarchicalList() {
-		Node tmp("Program");
-		HList = &tmp;
-		iter = HList;
+		HList = nullptr;
 	}
 	Node* getiter() { return iter.getitr(); }
 	void first(string n) {
-		Node tmp(n);
-		iter.itr = &tmp;
+		Node* tmp = new Node(n);
+		HList = tmp;
+		iter.itr = HList;
 	}
 	void remove(string n);
 	void insert(string n);
 	void insertAsChild(string n) {
-		Node t(n);
-		Node* tmp = &t;
+		Node* tmp = new Node(n);
 		if (iter.itr->child == nullptr) {
-			iter.itr->child = tmp;
+			HList->child = tmp;
 			tmp->parent = iter.itr;
 		}
 	}

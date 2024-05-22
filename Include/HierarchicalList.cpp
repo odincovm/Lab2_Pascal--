@@ -66,41 +66,40 @@ void HierarchicalList::myIterator::dec()
 void HierarchicalList::remove(string n)
 {
 	find(n);
-	Node* tmp = iter.getitr();
-	if (tmp->parent == nullptr) {
-		iter.dec();
-		tmp = iter.getitr();
-		tmp->Next = nullptr;
-	}
-	else {
-		if (tmp->Last != nullptr) {
+	if (iter.itr->value == n) {
+		
+		if (iter.itr->parent == nullptr) {
 			iter.dec();
-			tmp = iter.getitr();
-			tmp->Next = nullptr;
+			
+			iter.itr->Next = nullptr;
 		}
 		else {
-			iter.dec();
-			tmp = iter.getitr();
-			tmp->child = nullptr;
-		}	
+			if (iter.itr->Last != nullptr) {
+				iter.dec();
+			
+				iter.itr->Next = nullptr;
+			}
+			else {
+				iter.dec();
+			
+				iter.itr->child = nullptr;
+			}
+		}
 	}
+	
 }
 
 void HierarchicalList::insert(string n)
 {
-	Node t(n);
-	Node* tmp = &t;
-	tmp->value = n;
-	// Если это 1 элемент
-	Node* tmp1 = iter.getitr();
-	if (tmp1->value.size()==0) {
-		tmp1->value = n;
-	}
 
-	if (tmp1->Next == nullptr) {
-		tmp1->Next = tmp;
-		tmp->Last = tmp1;
-		tmp->parent = tmp1->parent;
+	Node* tmp = new Node(n);
+
+	// Если это 1 элемент
+	
+	if (iter.itr->Next == nullptr) {
+		iter.itr->Next = tmp;
+		tmp->Last = iter.itr;
+		tmp->parent = iter.itr->parent;
 	}
 
 }
@@ -109,13 +108,17 @@ void HierarchicalList::insert(string n)
 
 void HierarchicalList::find(string n)
 {
-	myIterator tmp = iter;
-	while (iter != nullptr) {
-		if (iter.getvalue() == n) {
+	myIterator tmp;
+	tmp.itr = HList;
+	while ((tmp.itr->child != nullptr)||(tmp.itr->Next!=nullptr)) {
+		if (tmp.getvalue() == n) {
+			iter.itr = tmp.itr;
 			return;
 		}
-		iter.inc();
+		tmp.inc();
 	}
-	if (iter == nullptr)
-		iter = tmp;
+	if (tmp.getvalue() == n) {
+		iter.itr = tmp.itr;
+		return;
+	}
 }
