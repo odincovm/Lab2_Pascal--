@@ -15,6 +15,11 @@ bool HierarchicalList::myIterator::operator==(Node* tmp)
 	return true;
 }
 
+void HierarchicalList::myIterator::operator=(Node* tmp)
+{
+	itr = tmp;
+}
+
 
 void HierarchicalList::myIterator::inc()
 {
@@ -83,26 +88,24 @@ void HierarchicalList::remove(string n)
 
 void HierarchicalList::insert(string n)
 {
-	Node* tmp;
+	Node t(n);
+	Node* tmp = &t;
 	tmp->value = n;
+	// Если это 1 элемент
 	Node* tmp1 = iter.getitr();
+	if (tmp1->value.size()==0) {
+		tmp1->value = n;
+	}
+
 	if (tmp1->Next == nullptr) {
 		tmp1->Next = tmp;
 		tmp->Last = tmp1;
 		tmp->parent = tmp1->parent;
 	}
+
 }
 
-void HierarchicalList::insertAsChild(string n)
-{
-	Node* tmp;
-	tmp->value = n;
-	Node* tmp1 = iter.getitr();
-	if (tmp1->child == nullptr) {
-		tmp1->child = tmp;
-		tmp->parent = tmp1;
-	}
-}
+
 
 void HierarchicalList::find(string n)
 {

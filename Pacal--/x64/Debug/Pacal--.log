@@ -1,1 +1,5 @@
-﻿
+﻿  ArrayTable.cpp
+  Main.cpp
+  Создание кода...
+C:\Users\Tytyf\Desktop\Lab2_Pascal--\Include\HierarchicalList.cpp(111,1): warning C4700: использована неинициализированная локальная переменная "tmp"
+  Pacal--.vcxproj -> C:\Users\Tytyf\Desktop\Lab2_Pascal--\x64\Debug\Pacal--.exe

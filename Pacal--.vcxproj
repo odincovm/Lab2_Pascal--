@@ -88,11 +88,11 @@
     <ClCompile>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>C:\Users\Tytyf\source\repos\Lab2_Pascal--\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Tytyf\Desktop\Lab2_Pascal--\HelperObjects;C:\Users\Tytyf\source\repos\Lab2_Pascal--\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -120,7 +120,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ArratTable.cpp" />
+    <ClCompile Include="Include\ArrayTable.cpp" />
     <ClCompile Include="Include\HierarchicalList.cpp" />
     <ClCompile Include="main\Main.cpp" />
   </ItemGroup>

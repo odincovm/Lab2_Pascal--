@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Include"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\Include\\HierarchicalList.cpp",
   "PreviewInSolutionExplorer": false
 }

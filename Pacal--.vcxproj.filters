@@ -18,7 +18,7 @@
     <ClCompile Include="main\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ArratTable.cpp">
+    <ClCompile Include="Include\ArrayTable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Include\HierarchicalList.cpp">

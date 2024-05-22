@@ -1,7 +1,8 @@
 ﻿
 #include <iostream>
 #include <string>
-#include <ArrayTable.h>
+#include<../Include/HierarchicalList.cpp>
+#include "../Include/ArrayTable.cpp"
 using namespace std;
 int main()
 {
