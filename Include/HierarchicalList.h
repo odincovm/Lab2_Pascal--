@@ -38,6 +38,12 @@ public:
 		HList = tmp;
 		iter.itr = HList;
 	}
+	void back() {
+		iter.itr = HList;
+	}
+	void inc() { iter.inc(); }
+	void dec() { iter.dec(); }
+	bool havechild() { return iter.itr->child != nullptr; }
 	void remove(string n);
 	void insert(string n);
 	void insertAsChild(string n) {
