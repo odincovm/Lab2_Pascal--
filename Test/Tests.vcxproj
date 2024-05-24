@@ -123,6 +123,7 @@
     <ClCompile Include="gtest\gtest-all.cc" />
     <ClCompile Include="Tests_table.cpp" />
     <ClCompile Include="test\main.cpp" />
+    <ClCompile Include="Test_controler.cpp" />
     <ClCompile Include="Test_List.cpp" />
   </ItemGroup>
   <ItemGroup>

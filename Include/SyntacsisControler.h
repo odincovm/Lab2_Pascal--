@@ -9,7 +9,7 @@ class SyntacsisControler
 	HierarchicalList program;
 public:
 	SyntacsisControler(HierarchicalList pr) { program = pr; }
-	~SyntacsisControler();
+
 	void check() {
 		NotFoundProgram();
 		NotFoudKeyWord();
@@ -22,13 +22,13 @@ public:
 private:
 	// Программы нет
 	void NotFoundProgram() {
-		if (program.get().empty())
+		if (program.getsize()==0)
 			throw "Program not found";
 	}
 	// Нет названия программы
 	void NotFoundProgramName() {
 		program.find("Program");
-		if (program.havechild()) {
+		if (!program.havechild()) {
 			throw "Not found name";
 		}
 		program.back();
@@ -44,8 +44,8 @@ private:
 		program.find("begin");
 		if (program.get() != "begin")
 			throw "Not found key word begin";
-		program.find("end");
-		if (program.get() != "end")
+		program.find("end.");
+		if (program.get() != "end.")
 			throw "Not found key word end";
 		program.back();
 	}
@@ -131,11 +131,11 @@ private:
 				if (comand[i] == ',') {
 					names.push_back(name);
 					name = "";
-				}
+				}else
 				if (comand[i] == ':') {
 					names.push_back(name);
 					break;
-				}
+				}else
 				if (comand[i] != ' ') {
 					name += comand[i];
 				}
@@ -173,7 +173,7 @@ private:
 		vector<string> constant = constname();
 		program.find("begin");
 		program.inc();
-		while (program.get() == "end.")
+		while (program.get() != "end.")
 		{
 			if (program.get().find(":=") != std::string::npos) {
 				for (int i = 0; i < constant.size(); i++) {

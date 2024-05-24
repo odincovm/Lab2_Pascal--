@@ -1,27 +1,28 @@
+#pragma once
 #include "HierarchicalList.h"
 
 //Итератор
-bool HierarchicalList::myIterator::operator!=(Node* tmp)
+inline bool HierarchicalList::myIterator::operator!=(Node* tmp)
 {
 	if (itr = tmp)
 		return true;
 	return false;
 }
 
-bool HierarchicalList::myIterator::operator==(Node* tmp)
+inline bool HierarchicalList::myIterator::operator==(Node* tmp)
 {
 	if (itr!=tmp)
 		return false;
 	return true;
 }
 
-void HierarchicalList::myIterator::operator=(Node* tmp)
+inline void HierarchicalList::myIterator::operator=(Node* tmp)
 {
 	itr = tmp;
 }
 
 
-void HierarchicalList::myIterator::inc()
+inline void HierarchicalList::myIterator::inc()
 {
 	// Когда пустой
 	if (itr == nullptr) 
@@ -42,7 +43,7 @@ void HierarchicalList::myIterator::inc()
 	}
 }
 
-void HierarchicalList::myIterator::dec()
+inline void HierarchicalList::myIterator::dec()
 {
 	//Шаг назад
 	if (itr->Last != nullptr) {
@@ -63,11 +64,12 @@ void HierarchicalList::myIterator::dec()
 	}
 }
 //Список
-void HierarchicalList::remove(string n)
+inline void HierarchicalList::remove(string n)
 {
 	find(n);
+
 	if (iter.itr->value == n) {
-		
+		size--;
 		if (iter.itr->parent == nullptr) {
 			iter.dec();
 			
@@ -89,28 +91,26 @@ void HierarchicalList::remove(string n)
 	
 }
 
-void HierarchicalList::insert(string n)
+inline void HierarchicalList::insert(string n)
 {
-
 	Node* tmp = new Node(n);
-
-	// Если это 1 элемент
-	
 	if (iter.itr->Next == nullptr) {
+		size++;
 		iter.itr->Next = tmp;
 		tmp->Last = iter.itr;
 		tmp->parent = iter.itr->parent;
+		iter.inc();
 	}
 
 }
 
 
 
-void HierarchicalList::find(string n)
+inline void HierarchicalList::find(string n)
 {
 	myIterator tmp;
 	tmp.itr = HList;
-	while ((tmp.itr->child != nullptr)||(tmp.itr->Next!=nullptr)) {
+	while ((tmp.itr->child != nullptr)||(tmp.itr->Next!=nullptr)||(tmp.itr->parent!=nullptr)) {
 		if (tmp.getvalue() == n) {
 			iter.itr = tmp.itr;
 			return;

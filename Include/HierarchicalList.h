@@ -7,7 +7,7 @@ class HierarchicalList {
 		Node* child;
 		Node* Next;
 		Node* Last;
-		string value;
+		string value=" ";
 		Node(string val) { value = val; parent = nullptr, child = nullptr, Next = nullptr, Last = nullptr;}
 		Node() { parent = nullptr; child = nullptr; Next = nullptr; Last = nullptr; }
 	};
@@ -22,11 +22,14 @@ class HierarchicalList {
 		void inc();
 		void dec();
 		Node* getitr() { return itr; }
-		string getvalue() { return itr->value; }
+		string getvalue() { 
+			return itr->value; 
+		}
 	};
 	//
 	Node* HList;
 	myIterator iter;
+	int size = 0;
 	
 public:
 	HierarchicalList() {
@@ -34,6 +37,7 @@ public:
 	}
 	Node* getiter() { return iter.getitr(); }
 	void first(string n) {
+		size++;
 		Node* tmp = new Node(n);
 		HList = tmp;
 		iter.itr = HList;
@@ -41,6 +45,7 @@ public:
 	void back() {
 		iter.itr = HList;
 	}
+	int getsize() { return size; }
 	void inc() { iter.inc(); }
 	void dec() { iter.dec(); }
 	bool havechild() { return iter.itr->child != nullptr; }
@@ -49,8 +54,10 @@ public:
 	void insertAsChild(string n) {
 		Node* tmp = new Node(n);
 		if (iter.itr->child == nullptr) {
-			HList->child = tmp;
+			size++;
+			iter.itr->child = tmp;
 			tmp->parent = iter.itr;
+			inc();
 		}
 	}
 	//find - устанавливает итератор на элемент с значением n  
