@@ -18,10 +18,10 @@
     <ClCompile Include="main\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Include\ArrayTable.cpp">
+    <ClCompile Include="Include\HierarchicalList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Include\HierarchicalList.cpp">
+    <ClCompile Include="Include\ArrayTable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

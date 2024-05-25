@@ -1,6 +1,5 @@
 #include<gtest.h>
 
-
 #include <../Include/HierarchicalList.cpp>
 
 TEST(List, can_create) {

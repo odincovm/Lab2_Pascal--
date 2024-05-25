@@ -1,2 +1,9 @@
-﻿  Test_controler.cpp
-  Tests.vcxproj -> C:\Users\Tytyf\Desktop\Lab2_Pascal--\x64\Debug\Tests.exe
+﻿  gtest-all.cc
+  Tests_table.cpp
+C:\Users\Tytyf\Desktop\Отчеты и тп\Lab2_Pascal--\Test\Tests_table.cpp(34,6): warning C4101: ans: неиспользованная локальная переменная
+  main.cpp
+  Test_controler.cpp
+  Test_List.cpp
+  Создание кода...
+  LINK : не найден или не выполнена сборка C:\Users\Tytyf\Desktop\Отчеты и тп\Lab2_Pascal--\x64\Debug\Tests.exe при последней инкрементной компоновке; выполняется полная компоновка
+  Tests.vcxproj -> C:\Users\Tytyf\Desktop\Отчеты и тп\Lab2_Pascal--\x64\Debug\Tests.exe

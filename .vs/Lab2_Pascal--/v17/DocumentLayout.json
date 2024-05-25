@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Tytyf\\Desktop\\Lab2_Pascal--\\",
+  "WorkspaceRootPath": "C:\\Users\\Tytyf\\Desktop\\\u041E\u0442\u0447\u0435\u0442\u044B \u0438 \u0442\u043F\\Lab2_Pascal--\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Tytyf\\Desktop\\Lab2_Pascal--\\Include\\SyntacsisControler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Tytyf\\Desktop\\\u041E\u0442\u0447\u0435\u0442\u044B \u0438 \u0442\u043F\\Lab2_Pascal--\\Include\\SyntacsisControler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Include\\SyntacsisControler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -40,14 +40,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "SyntacsisControler.h",
-              "DocumentMoniker": "C:\\Users\\Tytyf\\Desktop\\Lab2_Pascal--\\Include\\SyntacsisControler.h",
+              "DocumentMoniker": "C:\\Users\\Tytyf\\Desktop\\\u041E\u0442\u0447\u0435\u0442\u044B \u0438 \u0442\u043F\\Lab2_Pascal--\\Include\\SyntacsisControler.h",
               "RelativeDocumentMoniker": "Include\\SyntacsisControler.h",
-              "ToolTip": "C:\\Users\\Tytyf\\Desktop\\Lab2_Pascal--\\Include\\SyntacsisControler.h",
+              "ToolTip": "C:\\Users\\Tytyf\\Desktop\\\u041E\u0442\u0447\u0435\u0442\u044B \u0438 \u0442\u043F\\Lab2_Pascal--\\Include\\SyntacsisControler.h",
               "RelativeToolTip": "Include\\SyntacsisControler.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-22T15:29:58.936Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-22T15:29:58.936Z"
             }
           ]
         }
