@@ -8,6 +8,7 @@ class SyntacsisControler
 {
 	HierarchicalList program;
 public:
+
 	SyntacsisControler() {}
 	SyntacsisControler(HierarchicalList pr) { program = pr; }
 

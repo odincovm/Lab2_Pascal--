@@ -9,6 +9,8 @@ inline bool HierarchicalList::myIterator::operator!=(Node* tmp)
 	return false;
 }
 
+
+
 inline bool HierarchicalList::myIterator::operator==(Node* tmp)
 {
 	if (itr!=tmp)

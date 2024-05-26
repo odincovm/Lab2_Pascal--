@@ -334,6 +334,7 @@ void Compiler::generateMachineCode() {
 					}
 
 				}
+
 				else if (program.get() == "if") {
 					// Обработка условных операторов
 					program.inc();
