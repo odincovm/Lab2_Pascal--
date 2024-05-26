@@ -20,6 +20,7 @@ class HierarchicalList {
 		bool operator==(Node* tmp);
 		void operator=(Node* tmp);
 		void inc();
+		void next();
 		void dec();
 		Node* getitr() { return itr; }
 		string getvalue() { 
@@ -39,16 +40,27 @@ public:
 	void first(string n) {
 		size++;
 		Node* tmp = new Node(n);
-		HList = tmp;
-		iter.itr = HList;
+		if (HList != nullptr) {
+			while (HList->Next != nullptr) {
+				dec();
+			}
+			HList->Next = tmp;
+			iter = HList->Next;
+		}
+		else {
+			HList = tmp;
+			iter.itr = HList;
+		}
 	}
 	void back() {
 		iter.itr = HList;
 	}
 	int getsize() { return size; }
 	void inc() { iter.inc(); }
+	void next() { iter.next(); }
 	void dec() { iter.dec(); }
 	bool havechild() { return iter.itr->child != nullptr; }
+	bool haveNext() { return iter.itr->Next != nullptr; }
 	void remove(string n);
 	void insert(string n);
 	void insertAsChild(string n) {
@@ -58,12 +70,10 @@ public:
 			iter.itr->child = tmp;
 			tmp->parent = iter.itr;
 			inc();
-		}
+		} 
 	}
 	//find - устанавливает итератор на элемент с значением n  
 	void find(string n);
 	string get() { return iter.getvalue(); }
-
-
 
 };

@@ -1,6 +1,6 @@
 #include <gtest.h>
-
-#include<ArrayTable.cpp>
+#include "../Include/ArrayTable.cpp"
+#include "../Include/ArrayTable.h"
 
 TEST(Table, can_create) {
 	ASSERT_NO_THROW(ArrayTable<int> tmp);

@@ -1,12 +1,15 @@
-﻿
-#include <iostream>
+﻿#include <iostream>
 #include <string>
-#include<../Include/HierarchicalList.cpp>
-#include "../Include/ArrayTable.cpp"
+#include "../Include/Compiler.h"
 using namespace std;
 int main()
 {
-	ArrayTable<int> tmp;
-	tmp.insert("test", true, 12);
+	try {
+		Compiler cmp("C:\\PROGRAMMING\\Lab2_Pascal--\\Program.txt");
+		cmp.compile();
+	}
+	catch (const char* error_message){
+		cout << error_message << endl;
+	}
 }
 

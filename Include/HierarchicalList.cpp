@@ -42,6 +42,13 @@ inline void HierarchicalList::myIterator::inc()
 		itr = itr->Next;
 	}
 }
+inline void HierarchicalList::myIterator::next()
+{
+	if (itr->Next != nullptr) {
+		itr = itr->Next;
+		return;
+	}
+}
 
 inline void HierarchicalList::myIterator::dec()
 {

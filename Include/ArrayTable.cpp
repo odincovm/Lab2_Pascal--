@@ -1,4 +1,4 @@
-#include <ArrayTable.h>
+#include "ArrayTable.h"
 
 template<typename T>
 inline void ArrayTable<T>::insert(string n, bool c, T v)
@@ -21,7 +21,7 @@ void ArrayTable<T>::change(string n, T value)
 		}
 	}
 	remove(n);
-	insert(n,false, value);
+	insert(n, false, value);
 }
 
 template<typename T>

@@ -24,12 +24,15 @@
     <ClCompile Include="Include\HierarchicalList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Include\Compiler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\ArrayTable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\compiler.h">
+    <ClInclude Include="include\Compiler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\HierarchicalList.h">
@@ -38,5 +41,8 @@
     <ClInclude Include="include\SyntacsisControler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Program.txt" />
   </ItemGroup>
 </Project>

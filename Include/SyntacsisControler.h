@@ -1,6 +1,6 @@
 #pragma once
 
-#include <../Include/HierarchicalList.cpp>
+#include "../Include/HierarchicalList.h"
 #include <vector>
 #include <String>
 using namespace std;
@@ -8,6 +8,7 @@ class SyntacsisControler
 {
 	HierarchicalList program;
 public:
+	SyntacsisControler() {}
 	SyntacsisControler(HierarchicalList pr) { program = pr; }
 
 	void check() {
@@ -22,7 +23,7 @@ public:
 private:
 	// Программы нет
 	void NotFoundProgram() {
-		if (program.getsize()==0)
+		if (program.getsize() == 0)
 			throw "Program not found";
 	}
 	// Нет названия программы
@@ -131,20 +132,22 @@ private:
 				if (comand[i] == ',') {
 					names.push_back(name);
 					name = "";
-				}else
-				if (comand[i] == ':') {
-					names.push_back(name);
-					break;
-				}else
-				if (comand[i] != ' ') {
-					name += comand[i];
 				}
+				else
+					if (comand[i] == ':') {
+						names.push_back(name);
+						break;
+					}
+					else
+						if (comand[i] != ' ') {
+							name += comand[i];
+						}
 			}
 			program.inc();
 		}
 		return names;
 	}
-	// Проверка имени переменных (не начинается с цыфры и не пустое)
+	// Проверка имени переменных (не начинается с цифры и не пустое)
 	void checkvariablenames() {
 		vector<string> constant = constname();
 		vector<string> var = varname();

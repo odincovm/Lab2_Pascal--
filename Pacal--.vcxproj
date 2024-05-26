@@ -88,7 +88,7 @@
     <ClCompile>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>C:\Users\Tytyf\Desktop\Lab2_Pascal--\HelperObjects;C:\Users\Tytyf\source\repos\Lab2_Pascal--\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\PROGRAMMING\Lab2_Pascal--\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -121,14 +121,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Include\ArrayTable.cpp" />
+    <ClCompile Include="Include\Compiler.cpp" />
     <ClCompile Include="Include\HierarchicalList.cpp" />
     <ClCompile Include="main\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\ArrayTable.h" />
-    <ClInclude Include="include\compiler.h" />
+    <ClInclude Include="include\Compiler.h" />
     <ClInclude Include="include\HierarchicalList.h" />
     <ClInclude Include="include\SyntacsisControler.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Program.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

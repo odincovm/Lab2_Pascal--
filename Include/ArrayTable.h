@@ -14,7 +14,7 @@ class ArrayTable
 	vector<record> table;
 	size_t size = 0;
 public:
-	void insert(string n,bool c,T v);
+	void insert(string n, bool c, T v);
 	void change(string n, T value);
 	void remove(string n);
 	size_t getsize() { return size; }

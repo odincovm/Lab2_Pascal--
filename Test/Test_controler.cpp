@@ -1,5 +1,5 @@
 
-
+#include <../Include/HierarchicalList.cpp>
 #include <../Include/HierarchicalList.h>
 #include <gtest.h>
 #include <SyntacsisControler.h>

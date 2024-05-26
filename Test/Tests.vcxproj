@@ -88,7 +88,7 @@
     <ClCompile>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>C:\Users\Tytyf\Desktop\Lab2_Pascal--\Include;C:\Users\Tytyf\source\repos\Lab2_Pascal--\Main;C:\Users\Tytyf\source\repos\Lab2_Pascal--\Pacal--;C:\Users\Tytyf\source\repos\Lab2_Pascal--\HelperObjects;C:\Users\Tytyf\source\repos\Lab2_Pascal--\Include;C:\Users\Tytyf\source\repos\Lab2_Pascal--;C:\Users\Tytyf\source\repos\Lab2_Pascal--\Test\test;C:\Users\Tytyf\source\repos\Lab2_Pascal--\Test\gtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\PROGRAMMING\Lab2_Pascal--\Include;C:\PROGRAMMING\Lab2_Pascal--\Main;C:\PROGRAMMING\Lab2_Pascal--\Pacal--;C:\Users\Tytyf\source\repos\Lab2_Pascal--\HelperObjects;C:\PROGRAMMING\Lab2_Pascal--\Test\test;C:\PROGRAMMING\Lab2_Pascal--\Test\gtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
